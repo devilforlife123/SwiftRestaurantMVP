@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lfR-6o-pnH">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurants Parent View Controller-->
+        <scene sceneID="UCa-5f-cZC">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantsParentViewController" id="lfR-6o-pnH" customClass="RestaurantsParentViewController" customModule="SwiftRestaurantMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkr-xd-I4c">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-CG-knc">
+                                <rect key="frame" x="50" y="69" width="293" height="32"/>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Map"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didSelectSegment:" destination="lfR-6o-pnH" eventType="valueChanged" id="VYd-VO-5xo"/>
+                                </connections>
+                            </segmentedControl>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Edn-53-w6z">
+                                <rect key="frame" x="178" y="420" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vRC-ar-hx5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Edn-53-w6z" firstAttribute="centerY" secondItem="vRC-ar-hx5" secondAttribute="centerY" id="01n-o6-KX6"/>
+                            <constraint firstItem="HlY-CG-knc" firstAttribute="centerX" secondItem="vRC-ar-hx5" secondAttribute="centerX" id="Fsg-g4-DYR"/>
+                            <constraint firstItem="Edn-53-w6z" firstAttribute="centerX" secondItem="vRC-ar-hx5" secondAttribute="centerX" id="Spi-pX-Rx4"/>
+                            <constraint firstItem="HlY-CG-knc" firstAttribute="leading" secondItem="vRC-ar-hx5" secondAttribute="leading" constant="50" id="Uag-Xu-FbD"/>
+                            <constraint firstItem="HlY-CG-knc" firstAttribute="top" secondItem="vRC-ar-hx5" secondAttribute="top" constant="10" id="lDw-U9-BA3"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Edn-53-w6z" id="Ju4-q7-lCE"/>
+                        <outlet property="segmentedControl" destination="HlY-CG-knc" id="nRa-fG-vxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O86-UY-mtP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="112.5"/>
+        </scene>
+    </scenes>
+</document>

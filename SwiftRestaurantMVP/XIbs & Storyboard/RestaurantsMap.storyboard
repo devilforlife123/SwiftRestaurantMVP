@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fV5-Fv-tws">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurants Map View Controller-->
+        <scene sceneID="zgb-uP-M3l">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantsMapViewController" id="fV5-Fv-tws" customClass="RestaurantsMapViewController" customModule="SwiftRestaurantMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mNs-il-LLg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GUe-IH-0a9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0PU-I7-BxU"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GUe-IH-0a9" firstAttribute="bottom" secondItem="0PU-I7-BxU" secondAttribute="bottom" constant="34" id="eCt-tR-HlA"/>
+                            <constraint firstItem="GUe-IH-0a9" firstAttribute="top" secondItem="0PU-I7-BxU" secondAttribute="top" id="rf4-xT-E97"/>
+                            <constraint firstItem="GUe-IH-0a9" firstAttribute="trailing" secondItem="0PU-I7-BxU" secondAttribute="trailing" id="tAw-fL-hrg"/>
+                            <constraint firstItem="GUe-IH-0a9" firstAttribute="leading" secondItem="0PU-I7-BxU" secondAttribute="leading" id="vBt-Mc-XGB"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="GUe-IH-0a9" id="2dc-sM-dVg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ve4-Q1-7ed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+</document>
